@@ -2,12 +2,10 @@ module.exports = {
   presets: [require('./src/themes/cohereTheme')],
   content: ['src/**/*.{js,jsx,ts,tsx}'],
   plugins: [require('@tailwindcss/typography')],
-  fontFamily: {
-    body: ['Graphik-Regular', 'Arial', ...defaultTheme.fontFamily.sans],
   theme: {
     extend: {
       screens: {
-        '3xl': '2000px',
+        '3xl': '2000px', //test test
       },
       minWidth: {
         'citation-panel-md': '259px', // subtract 10px for scrollbar and 1px for border
