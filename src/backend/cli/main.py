@@ -266,6 +266,13 @@ def start():
     for _, implementation in IMPLEMENTATIONS.items():
         implementation(secrets)
 
+    #print_styled(
+        #"👋 Environment is set-up.", bcolors.MAGENTA
+    #)
+
+    #print("-------------- test --------------")
+
+
     # SET UP TOOLS
     use_community_features = args.use_community and community_tools_prompt(secrets)
     if use_community_features:

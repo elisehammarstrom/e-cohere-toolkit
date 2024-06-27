@@ -12,7 +12,7 @@ services:
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_DB=toolkit
     ports:
-      - '5432:5432'
+      - '5432:5432' #changed from '5432:5432' 
     volumes: 
       - db:/var/lib/postgresql/data
   test_db:
@@ -23,7 +23,7 @@ services:
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_DB=test_toolkit
     ports:
-      - '5433:5432'
+      - '5433:5432' #changed from '5433:5432'
   backend:
     build:
       context: .

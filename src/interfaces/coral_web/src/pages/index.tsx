@@ -86,6 +86,17 @@ export const getServerSideProps: GetServerSideProps = async () => {
       queryFn: async () => await deps.cohereClient.listDeployments(),
     }),
   ]);
+  //   deps.queryClient.prefetchQuery({
+  //     queryKey: ['deployments'],
+  //     queryFn: async () => await deps.cohereClient.listDeployments(),
+  //   }),
+  // ])
+  //   .then((results) => {
+  //     console.log('Prefetching results:', results); // Log results of prefetching
+  //   })
+  //   .catch((error) => {
+  //     console.error('Error prefetching data:', error); // Log any errors that occur during prefetching
+  //   });
 
   return {
     props: {

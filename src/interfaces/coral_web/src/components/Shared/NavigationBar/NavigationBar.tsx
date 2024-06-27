@@ -25,6 +25,14 @@ export const NavigationBar: React.FC<PropsWithChildren<{ className?: string }>> 
           <Logo hasCustomLogo={env.NEXT_PUBLIC_HAS_CUSTOM_LOGO === 'true'} />
         </div>
       </Link>
+
+      {/* Adjusted circular button */}
+      <div className="flex items-center ml-auto">
+        <button className="flex items-center justify-center w-16 h-16 rounded-full bg-mindmist text-mindblue font-bold">
+          Lisa
+        </button>
+      </div>
+
       {children}
     </nav>
   );

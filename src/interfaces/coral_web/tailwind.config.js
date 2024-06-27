@@ -2,6 +2,8 @@ module.exports = {
   presets: [require('./src/themes/cohereTheme')],
   content: ['src/**/*.{js,jsx,ts,tsx}'],
   plugins: [require('@tailwindcss/typography')],
+  fontFamily: {
+    body: ['Graphik-Regular', 'Arial', ...defaultTheme.fontFamily.sans],
   theme: {
     extend: {
       screens: {

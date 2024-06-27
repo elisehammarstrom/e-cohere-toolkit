@@ -75,12 +75,12 @@ const useHeaderMenu = ({ agentId }: { agentId?: string }) => {
         ]
       : []),
     {
-      label: 'Settings',
+      label: 'Inställningar',
       iconName: 'settings',
       onClick: handleOpenSettings,
     },
     {
-      label: 'New chat',
+      label: 'Ny sökning',
       iconName: 'new-message',
       onClick: handleNewChat,
     },

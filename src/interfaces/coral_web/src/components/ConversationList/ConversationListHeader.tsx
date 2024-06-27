@@ -78,7 +78,7 @@ export const ConversationListHeader: React.FC<Props> = ({
                 className="flex h-8 w-8 items-center justify-center text-primary-500 lg:hidden"
                 kind="outline"
               />
-              <Text styleAs="p-lg">Chats</Text>
+              <Text styleAs="p-lg">Sökhistorik</Text>
             </span>
           </div>
           <div className="flex items-center gap-x-3">

@@ -14,6 +14,7 @@ import { useIsDesktop } from '@/hooks/breakpoint';
 import { useSession } from '@/hooks/session';
 import { useSettingsStore } from '@/stores';
 import { cn } from '@/utils/cn';
+import { SearchBar } from '@/components/Shared/SearchBar/SearchBar'; //custom searchbar
 
 const LeftDrawer: React.FC<PropsWithChildren> = ({ children }) => <>{children}</>;
 const Main: React.FC<PropsWithChildren> = ({ children }) => <>{children}</>;
@@ -70,15 +71,16 @@ export const Layout: React.FC<Props> = ({ title = 'Chat', children }) => {
   return (
     <>
       <PageHead title={capitalize(title)} />
-      <div className="flex h-screen w-full flex-1 flex-col gap-3 bg-secondary-100 p-3">
+      <div className="flex h-screen w-full flex-1 flex-col gap-3 bg-mindapricot p-3">
         <NavigationBar>
           <span className="flex items-center gap-x-2">
-            <DeploymentsDropdown />
-            <EditEnvVariablesButton className="py-0" />
+            {/* <DeploymentsDropdown /> */}
+            {/* <EditEnvVariablesButton className="py-0" /> */}
             {userMenu}
           </span>
         </NavigationBar>
         {bannerMessage && <Banner size="sm">{bannerMessage}</Banner>}
+      
 
         <div className={cn('relative flex h-full flex-grow flex-nowrap overflow-hidden')}>
           <Transition

@@ -9,6 +9,12 @@ module.exports = {
         pureWhite: '#FFFFFF',
         black: '#212121',
         white: '#FAFAFA',
+        mindorange: '#F17509',
+        mindapricot: '#FFE1D4',
+        mindmist: '#DEE7E8',
+        mindblue: '#264D52',
+
+        // shades of colors, with 900 being the darkest and 50 being the lightest
         primary: {
           900: '#511D12',
           800: '#903420',
@@ -31,7 +37,7 @@ module.exports = {
           400: '#C5BCAC',
           300: '#D7CFC1',
           200: '#E4DED2',
-          100: '#E9E6DE',
+          100: '#F17509', // was  100: '#E9E6DE'
           50: '#F5F4F2',
         },
         // Marble white
@@ -128,8 +134,16 @@ module.exports = {
         'icon-lg': ['24px', { lineHeight: '100%' }],
         'icon-xl': ['36px', { lineHeight: '100%' }],
       },
+      // fontFamily: {
+      //   body: ['CohereText', 'Arial', ...defaultTheme.fontFamily.sans],
+      //   variable: ['CohereVariable', 'Arial', ...defaultTheme.fontFamily.serif],
+      //   code: ['CohereMono', ...defaultTheme.fontFamily.mono],
+      //   iconOutline: ['CohereIconOutline'],
+      //   iconDefault: ['CohereIconDefault'],
+      // },
       fontFamily: {
-        body: ['CohereText', 'Arial', ...defaultTheme.fontFamily.sans],
+        // Replace 'CohereText' with 'Graphik-Regular' as your base font
+        body: ['Graphik-Regular', 'Arial', ...defaultTheme.fontFamily.sans],
         variable: ['CohereVariable', 'Arial', ...defaultTheme.fontFamily.serif],
         code: ['CohereMono', ...defaultTheme.fontFamily.mono],
         iconOutline: ['CohereIconOutline'],
