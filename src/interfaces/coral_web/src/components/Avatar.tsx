@@ -30,34 +30,32 @@ export const Avatar: React.FC<Props> = ({ message }) => {
   const isGroundingOn = !hasRAGOnProperty || isRAGOn;
 
   return (
-    <div
-      className={cn(
-        'flex flex-shrink-0 items-center justify-center rounded text-white',
-        'h-7 w-7 md:h-9 md:w-9',
-        {
-          'bg-volcanic-500': isErroredOrAborted,
-          'bg-quartz-700': isUser,
-        },
-        isGroundingOn
-          ? {
-              'bg-primary-900': isFulfilled,
-              'bg-primary-400': isTypingOrLoading,
-            }
-          : {
-              'bg-secondary-400': isFulfilled,
-              'bg-secondary-200': isTypingOrLoading,
-            }
-      )}
-    >
-      {isBot && (
-        <BotAvatar
-          state={message.state}
-          style={isErroredOrAborted ? 'grayscale' : isGroundingOn ? 'primary' : 'secondary'}
-        />
-      )}
+    ""
+    // <div
+    //   className={cn(
+    //     'flex flex-shrink-0 items-center justify-center rounded text-white',
+    //     'h-7 w-7 md:h-9 md:w-9',
+    //     {
+    //       'bg-volcanic-500': isErroredOrAborted,
+    //       'bg-quartz-700': isUser,
+    //     },
+    //     isGroundingOn
+    //       ? {
+    //           'bg-primary-900': isFulfilled,
+    //           'bg-primary-400': isTypingOrLoading,
+    //         }
+    //       : {
+    //           'bg-secondary-400': isFulfilled,
+    //           'bg-secondary-200': isTypingOrLoading,
+    //         }
+    //   )}
+    // >
+    //   {isBot && (
+    //     <BotAvatar state={message.state} style={isErroredOrAborted ? 'grayscale' : isGroundingOn ? 'primary' : 'secondary'}/>
+    //   )}
 
-      {isUser && <UserAvatar />}
-    </div>
+    //   {isUser && <UserAvatar />}
+    // </div>
   );
 };
 
@@ -67,17 +65,13 @@ export const BotAvatar: React.FC<{
 }> = ({ state, style }) => {
   if (state === BotState.TYPING || state === BotState.LOADING) {
     return (
-      <Lottie
-        animationData={style === 'secondary' ? logoTypingMushroom : logoTyping}
-        play
-        loop
-        className="h-5 w-5 md:h-7 md:w-7"
-      />
+      ""
+      //  <Lottie animationData={style === 'secondary' ? logoTypingMushroom : logoTyping} play loop className="h-5 w-5 md:h-7 md:w-7"/>
     );
   }
-  return <CoralLogo style={style} className="h-4 w-4 md:h-5 md:w-5" />;
+  return "" //<CoralLogo style={style} className="h-4 w-4 md:h-5 md:w-5" />;
 };
 
 const UserAvatar: React.FC = () => {
-  return <Icon name="profile" className="text-icon-md text-white md:text-icon-lg" />;
+  return "" //<Icon name="profile" className="text-icon-md text-white md:text-icon-lg" />;
 };

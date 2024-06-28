@@ -16,7 +16,7 @@ type Prompt = {
 
 const SUGGESTED_PROMPTS: Prompt[] = [
   {
-    label: 'Plot real estate data',
+    label: 'Sammanfatta x',
     params: {
       fileIds: [],
       tools: [
@@ -89,7 +89,7 @@ export const FirstTurnSuggestions: React.FC<Props> = ({ isFirstTurn, onSuggestio
       leave="transition-opacity duration-300"
       as="div"
     >
-      <ButtonGroup buttons={suggestedPromptButtons} />
+      {/* <ButtonGroup buttons={suggestedPromptButtons} /> */}
     </Transition>
   );
 };

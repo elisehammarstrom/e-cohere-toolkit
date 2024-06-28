@@ -149,20 +149,21 @@ export const Header: React.FC<Props> = ({ isStreaming, agentId }) => {
           )}
 
           <Text className="truncate" styleAs="p-lg" as="span">
-            {name}
+            {/* {name} */}
+            Nuvarande sökning
           </Text>
         </span>
         <span className="flex items-center gap-x-2 py-4 pl-4 md:pl-0">
           <KebabMenu className="md:hidden" items={menuItems} anchor="left start" />
           <IconButton
-            tooltip={{ label: 'New chat', placement: 'bottom-end', size: 'md' }}
+            tooltip={{ label: 'Ny sökning', placement: 'bottom-end', size: 'md' }}
             className="hidden md:flex"
             iconName="new-message"
             onClick={handleNewChat}
           />
           <div className="relative">
             <IconButton
-              tooltip={{ label: 'Settings', placement: 'bottom-end', size: 'md' }}
+              tooltip={{ label: 'Inställningar', placement: 'bottom-end', size: 'md' }}
               className="hidden md:flex"
               onClick={handleOpenSettings}
               iconName="settings"

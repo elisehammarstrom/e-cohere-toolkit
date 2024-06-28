@@ -186,7 +186,7 @@ export const Composer: React.FC<Props> = ({
             dir="auto"
             ref={textareaRef}
             value={value}
-            placeholder="Message..."
+            placeholder="Sök här..."
             className={cn(
               'w-full flex-1 resize-none overflow-hidden',
               'self-center',
