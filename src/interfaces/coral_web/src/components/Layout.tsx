@@ -72,6 +72,14 @@ export const Layout: React.FC<Props> = ({ title = 'Chat', children }) => {
     <>
     <PageHead title={capitalize(title)} />
 
+    <NavigationBar>
+          <span className="flex items-center gap-x-2">
+            {/* <DeploymentsDropdown /> */}
+            {/* <EditEnvVariablesButton className="py-0" /> */}
+            {userMenu}
+          </span>
+        </NavigationBar>
+
     <div className="fixed flex flex-col h-screen w-full">
 
       {/* <div className="h-2/5 w-full bg-mindorange flex flex-row justify-end"> */}
@@ -88,9 +96,9 @@ export const Layout: React.FC<Props> = ({ title = 'Chat', children }) => {
             <div className="flex flex-col items-center w-full h-full justify-end">
               <h1 className="text-xl font-bold">Sök här</h1>
               <h2 className="text-l font-bold">Subheadline</h2>
-              <div className="flex flex-col my-4 items-center w-full">
+              <div className="flex flex-col my-8 items-center w-full">
                 <SearchBar/>
-                <button className="w-full my-4 md:w-auto px-6 py-3 bg-mindorange border-mindorange text-white fill-white active:scale-95 duration-100 border will-change-transform overflow-hidden relative rounded-xl transition-all">Options</button>
+                {/* <button className="w-full my-4 md:w-auto px-6 py-3 bg-mindorange border-mindorange text-white fill-white active:scale-95 duration-100 border will-change-transform overflow-hidden relative rounded-xl transition-all">Options</button> */}
 
               </div>
               
@@ -102,38 +110,55 @@ export const Layout: React.FC<Props> = ({ title = 'Chat', children }) => {
         {/* right section content in first horizontal section */}
       </div>
     
-    
     </div>
 
     
 
     {/* <div className="h-3/5 w-full bg-mindorange"> */}
-    <div className="h-3/5 w-full">
+    <div className="h-3/5 w-full my-8">
       {/* Second horizontal section content */}
 
       {/* <div className="h-1/2 w-full bg-mindmist border-t-5 border-gray-200"> */}
-      <div className="h-1/2 w-full border-t-5 border-gray-200">
+      <div className="h-1/2 w-full border-t-5 border-gray-200 justify-center flex">
         {/* 1st section content in 2nd horizontal section */}
+        <section className="flex flex-col gap-4 items-center">
+            <h2 className="text-lg font-semibold">Your selection for lookout:</h2>
+            <div className="flex gap-4">
+              <button className="px-4 py-2 text-white bg-mindblue rounded-2xl">Theme 1: Suicide prevention</button>
+              <button className="px-4 py-2 text-white bg-mindblue rounded-2xl">Theme 2: Medical treatments for x</button>
+              <select className="px-4 py-2 border border-gray-300 rounded-2xl">
+                <option>Dropdown of known themes to select from</option>
+                <option>Default theme X</option>
+                <option>Default theme Y</option>
+              </select>
+            </div>
+            <button className="self-middle px-6 py-3 text-white bg-mindblue rounded-xl">Save</button>
+          </section>
       </div>
 
       {/* <div className="h-1/2 w-full bg-mindblue"> */}
       <div className="h-1/2 w-full">
           {/* 2nd section content in 2nd horizontal section */}
+
+          <section className="flex gap-4">
+            <div className="flex-grow p-4 border border-gray-300 rounded-xl">
+              <h3 className="mb-2 font-semibold">Recent Pubs</h3>
+              <div className="mb-2">
+                <h4 className="font-bold">Title</h4>
+                <p>Summary</p>
+              </div>
+              <div>
+                <h4 className="font-bold">Title</h4>
+                <p>Summary</p>
+              </div>
+            </div>
+            <div className="flex-grow p-4 border border-gray-300 rounded-xl">
+              <h3 className="mb-2 font-semibold">Updates for your saved themes</h3>
+            </div>
+          </section>
+          
       </div>
     </div>
-
-    {/* <svg viewBox="0 0 1024 1024"
-              class="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-x-1/2 [mask-image:radial-gradient(closest-side,white,transparent)]"
-              aria-hidden="true">
-              <circle cx="512" cy="512" r="512" fill="url(#827591b1-ce8c-4110-b064-7cb85a0b1217)" fill-opacity="0.7">
-              </circle>
-              <defs>
-                  <radialGradient id="827591b1-ce8c-4110-b064-7cb85a0b1217">
-                      <stop stop-color="#F17509"></stop>
-                      <stop offset="1" stop-color="#FFE1D4"></stop>
-                  </radialGradient>
-              </defs>
-          </svg> */}
 
 
     </div>

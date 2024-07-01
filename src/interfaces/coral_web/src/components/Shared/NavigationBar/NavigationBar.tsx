@@ -15,7 +15,7 @@ export const NavigationBar: React.FC<PropsWithChildren<{ className?: string }>> 
   return (
     <nav
       className={cx(
-        'z-navigation flex w-full items-center justify-between rounded-lg border px-4 py-3',
+        'z-navigation flex w-full items-center justify-between rounded-lg px-4 py-3',
         'border-marble-400 bg-marble-100',
         className
       )}
