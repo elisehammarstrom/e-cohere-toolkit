@@ -7,7 +7,7 @@ import { CohereClient, Document } from '@/cohere-client';
 import Conversation from '@/components/Conversation';
 import { ConversationError } from '@/components/ConversationError';
 import ConversationListPanel from '@/components/ConversationList/ConversationListPanel';
-import { Layout, LayoutSection } from '@/components/Layout';
+import { Layout, LayoutSection } from '@/components/LayoutOld';
 import { Spinner } from '@/components/Shared';
 import { TOOL_PYTHON_INTERPRETER_ID } from '@/constants';
 import { BannerContext } from '@/context/BannerContext';

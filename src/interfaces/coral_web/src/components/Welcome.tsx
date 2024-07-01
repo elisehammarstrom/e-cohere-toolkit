@@ -37,9 +37,10 @@ export const Welcome: React.FC<Props> = ({ show, agentId }) => {
         className={cn(
           'flex h-7 w-7 items-center justify-center rounded md:h-9 md:w-9',
           isAgent && getCohereColor(agent.id),
-          {
-            'bg-secondary-400': !isAgent,
-          }
+          // makes a little brown/gray square in the message area
+          // {
+          //   'bg-secondary-400': !isAgent,
+          // }
         )}
       >
         {!isAgent ? (
