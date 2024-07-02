@@ -5,7 +5,7 @@ import { useContext, useEffect } from 'react';
 import { CohereClient } from '@/cohere-client';
 import Conversation from '@/components/Conversation';
 import ConversationListPanel from '@/components/ConversationList/ConversationListPanel';
-import { Layout, LayoutSection } from '@/components/LayoutOld';
+import { Layout, LayoutSection } from '@/components/Layout';
 import { BannerContext } from '@/context/BannerContext';
 import { useListAllDeployments } from '@/hooks/deployments';
 import { useExperimentalFeatures } from '@/hooks/experimentalFeatures';

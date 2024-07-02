@@ -93,7 +93,7 @@ export const Layout: React.FC<Props> = ({ title = 'Chat', children }) => {
         <div className="flex mb-4 w-full h-full flex flex-col mt-auto w-2/4">
               {/* middle section content in first horizontal section */}
             <div className="flex flex-col items-center w-full h-full justify-end">
-              <h1 className="text-xl font-bold">Sök här</h1>
+              <h1 className="text-xl font-bold">Kunskapssökaren</h1>
               <h2 className="text-l font-bold">Subheadline</h2>
               <div className="flex flex-col my-8 items-center w-full">
                 <SearchBar/>
@@ -118,46 +118,70 @@ export const Layout: React.FC<Props> = ({ title = 'Chat', children }) => {
       {/* Second horizontal section content */}
 
       {/* <div className="h-1/2 w-full bg-mindmist border-t-5 border-gray-200"> */}
-      <div className="h-1/2 w-full border-t-5 border-gray-200 justify-center flex">
+      <div className="h-1/2 w-full border-t-5 border-gray-200 justify-start flex flex-col items-center gap-8">
         {/* 1st section content in 2nd horizontal section */}
-        <section className="flex flex-col gap-4 items-center">
+        <section className="flex flex-col gap-4 items-center w-full max-w-2xl">
             <h2 className="text-lg font-semibold">Select your sources:</h2>
             <div className="flex gap-4">
-              <button className="px-4 py-2 text-white bg-mindmist rounded-2xl">PubMed</button>
-              <button className="px-4 py-2 text-white bg-mindblue rounded-2xl">Google Scholar</button>
-              <button className="px-4 py-2 text-white bg-mindblue rounded-2xl">ArchiveX</button>
-              <button className="self-middle px-6 py-3 text-white bg-mindblue rounded-xl">Upload your own documents</button>
-              {/* <select className="px-4 py-2 border border-gray-300 rounded-2xl">
-                <option>Dropdown of known themes to select from</option>
-                <option>Default theme X</option>
-                <option>Default theme Y</option>
-              </select> */}
+              <div className="flex items-center mb-4">
+                <input 
+                  id="default-checkbox" 
+                  type="checkbox" 
+                  value="" 
+                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                />
+                <label 
+                  htmlFor="default-checkbox" 
+                  className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                >
+                  PubMed
+                </label>
+              </div>
+              <div className="flex items-center mb-4">
+                <input 
+                  id="checked-checkbox" 
+                  type="checkbox" 
+                  value="" 
+                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                />
+                <label 
+                  htmlFor="checked-checkbox" 
+                  className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                >
+                  Google Scholar
+                </label>
+              </div>
+
+              <div className="flex items-center mb-4">
+                <input 
+                  id="checked-checkbox" 
+                  type="checkbox" 
+                  value="" 
+                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                />
+                <label 
+                  htmlFor="checked-checkbox" 
+                  className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                >
+                  Google Scholar
+                </label>
+              </div>
+
             </div>
-            {/* <button className="self-middle px-6 py-3 text-white bg-mindblue rounded-xl">Save</button> */}
           </section>
+
+          <section className="flex flex-col gap-4 items-center">
+
+            <h2 className="text-lg font-semibold">And/or upload your own</h2>
+
+          </section>
+
+
       </div>
 
       {/* <div className="h-1/2 w-full bg-mindblue"> */}
       <div className="h-1/2 w-full">
-          {/* 2nd section content in 2nd horizontal section */}
-
-          {/* <section className="flex gap-4">
-            <div className="flex-grow p-4 border border-gray-300 rounded-xl">
-              <h3 className="mb-2 font-semibold">Recent Pubs</h3>
-              <div className="mb-2">
-                <h4 className="font-bold">Title</h4>
-                <p>Summary</p>
-              </div>
-              <div>
-                <h4 className="font-bold">Title</h4>
-                <p>Summary</p>
-              </div>
-            </div>
-            <div className="flex-grow p-4 border border-gray-300 rounded-xl">
-              <h3 className="mb-2 font-semibold">Updates for your saved themes</h3>
-            </div>
-          </section> */}
-          
+          {/* 2nd section content in 2nd horizontal section */}     
       </div>
     </div>
 
