@@ -121,7 +121,7 @@ export const Layout: React.FC<Props> = ({ title = 'Chat', children }) => {
       {/* <div className="h-1/2 w-full bg-mindmist border-t-5 border-gray-200"> */}
       <div className="h-1/2 w-full border-t-5 border-gray-200 justify-start flex flex-col items-center gap-8">
         {/* 1st section content in 2nd horizontal section */}
-        <section className="flex flex-col gap-4 items-center w-full max-w-2xl">
+        {/* <section className="flex flex-col gap-4 items-center w-full max-w-2xl">
             <h2 className="text-lg font-semibold">Select your sources:</h2>
             <div className="flex gap-4">
               <div className="flex items-center mb-4">
@@ -169,7 +169,12 @@ export const Layout: React.FC<Props> = ({ title = 'Chat', children }) => {
               </div>
 
             </div>
-          </section>
+          </section> */}
+
+           {/* Include ToolsTab directly */}
+        <section className="tools-tab-content w-1/5 flex flex-col">
+          <ToolsTab />
+        </section>
 
           <section className="flex flex-col items-center">
 
@@ -221,10 +226,7 @@ export const Layout: React.FC<Props> = ({ title = 'Chat', children }) => {
           <SettingsDrawer /> */}
 
 
-        {/* Include ToolsTab directly */}
-        <section className="tools-tab-content w-1/5">
-          <ToolsTab />
-        </section>
+       
 
       
 

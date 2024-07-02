@@ -116,10 +116,10 @@ export const ToolsTab: React.FC<{ className?: string }> = ({ className = '' }) =
         {availableTools.length > 0 && (
           <>
             <Text as="span" styleAs="label" className="font-medium">
-              Ready to Use
+              Källor för sökning
             </Text>
 
-            <div className="flex flex-col gap-y-5">
+            <div className="flex flex-row gap-x-5">
               {availableTools.map(({ name, display_name, description, error_message }) => {
                 const enabledTool = enabledTools.find((enabledTool) => enabledTool.name === name);
                 const checked = !!enabledTool;
