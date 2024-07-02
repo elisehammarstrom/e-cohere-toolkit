@@ -172,7 +172,7 @@ export const Layout: React.FC<Props> = ({ title = 'Chat', children }) => {
           </section> */}
 
            {/* Include ToolsTab directly */}
-        <section className="tools-tab-content w-1/5 flex flex-col">
+        <section className="tools-tab-content">
           <ToolsTab />
         </section>
 
