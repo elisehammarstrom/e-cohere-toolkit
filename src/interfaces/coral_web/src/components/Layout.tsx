@@ -170,9 +170,10 @@ export const Layout: React.FC<Props> = ({ title = 'Chat', children }) => {
             </div>
           </section>
 
-          <section className="flex flex-col gap-4 items-center">
+          <section className="flex flex-col items-center">
 
             <h2 className="text-lg font-semibold">And/or upload your own</h2>
+            <p className="text-s font-semibold">Add section here</p>
 
           </section>
 
@@ -187,6 +188,32 @@ export const Layout: React.FC<Props> = ({ title = 'Chat', children }) => {
 
 
     </div>
+
+    <Transition
+            as="main"
+            show={!isMobileConvListPanelOpen || isDesktop}
+            enterFrom="translate-x-full lg:translate-x-0"
+            enterTo="translate-x-0"
+            leaveFrom="translate-x-0"
+            leaveTo="translate-x-full lg:translate-x-0"
+            className={cn(
+              'z-main-section flex flex-grow lg:min-w-0',
+              'absolute h-full w-full lg:static lg:h-auto',
+              'transition-transform duration-500 ease-in-out lg:transition-none'
+            )}
+          >
+            <section
+              className={cn(
+                'relative flex h-full min-w-0 flex-grow flex-col',
+                'rounded-lg border',
+                'border-marble-400 bg-marble-100',
+                'overflow-hidden'
+              )}
+            >
+              {mainElement}
+            </section>
+          </Transition>
+          <SettingsDrawer />
 
     
 
