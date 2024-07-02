@@ -23,7 +23,7 @@ export const SearchBar: React.FC<Props> = ({ className }) => {
           <input 
             type="text" 
             placeholder="Sök här..." 
-            className="flex-grow p-4 rounded-2xl text-xl border-opacity-30 border border-gray-300"
+            className="flex-grow p-4 rounded-2xl text-xl border-opacity-30 border border-gray-300 font-light"
           />
           <button 
             type="submit" 

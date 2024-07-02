@@ -94,8 +94,8 @@ export const Layout: React.FC<Props> = ({ title = 'Chat', children }) => {
         <div className="flex mb-4 w-full h-full flex flex-col mt-auto w-2/4">
               {/* middle section content in first horizontal section */}
             <div className="flex flex-col items-center w-full h-full justify-end">
-              <h1 className="text-xl font-bold">Kunskapssökaren</h1>
-              <h2 className="text-l font-bold">Subheadline</h2>
+              <h1 className="text-xl font-medium text-mindorange">Kunskapssökaren</h1>
+              <h2 className="text-l font-medium text-mindorange">Subheadline</h2>
               <div className="flex flex-col my-8 items-center w-full">
                 <SearchBar/>
                 {/* <button className="w-full my-4 md:w-auto px-6 py-3 bg-mindorange border-mindorange text-white fill-white active:scale-95 duration-100 border will-change-transform overflow-hidden relative rounded-xl transition-all">Options</button> */}
