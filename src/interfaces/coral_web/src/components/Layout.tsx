@@ -15,6 +15,7 @@ import { useSession } from '@/hooks/session';
 import { useSettingsStore } from '@/stores';
 import { cn } from '@/utils/cn';
 import { SearchBar } from '@/components/Shared/SearchBar/SearchBar'; //custom searchbar
+import { ToolsTab } from '@/components/Settings/ToolsTab';
 
 const LeftDrawer: React.FC<PropsWithChildren> = ({ children }) => <>{children}</>;
 const Main: React.FC<PropsWithChildren> = ({ children }) => <>{children}</>;
@@ -183,13 +184,17 @@ export const Layout: React.FC<Props> = ({ title = 'Chat', children }) => {
       {/* <div className="h-1/2 w-full bg-mindblue"> */}
       <div className="h-1/2 w-full">
           {/* 2nd section content in 2nd horizontal section */}     
+
       </div>
+
+
+
     </div>
 
 
     </div>
 
-    <Transition
+    {/* <Transition
             as="main"
             show={!isMobileConvListPanelOpen || isDesktop}
             enterFrom="translate-x-full lg:translate-x-0"
@@ -213,7 +218,17 @@ export const Layout: React.FC<Props> = ({ title = 'Chat', children }) => {
               {mainElement}
             </section>
           </Transition>
-          <SettingsDrawer />
+          <SettingsDrawer /> */}
+
+
+        {/* Include ToolsTab directly */}
+        <section className="tools-tab-content w-1/5">
+          <ToolsTab />
+        </section>
+
+      
+
+      
 
     
 

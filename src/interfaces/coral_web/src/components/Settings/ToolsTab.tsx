@@ -22,12 +22,25 @@ export const ToolsTab: React.FC<{ className?: string }> = ({ className = '' }) =
   const { defaultFileLoaderTool } = useDefaultFileLoaderTool();
   const { clearComposerFiles } = useFilesStore();
 
+  // List of tool names that should be disabled
+  const disabledToolNames = ["search_file", "read_document", "toolkit_python_interpreter", "wikipedia", "toolkit_calculator", "google_drive", "example_connector", "file_reader_llamaindex", "wolfram_alpha"]  ; // replace with actual tool names
+
+
   const { availableTools, unavailableTools } = useMemo(() => {
     return (data ?? [])
       .filter((t) => t.is_visible)
       .reduce<{ availableTools: ManagedTool[]; unavailableTools: ManagedTool[] }>(
         (acc, tool) => {
-          if (tool.is_available) {
+          // Check if the tool should be disabled
+        const isToolDisabled = disabledToolNames.includes(tool.name);
+
+        // Skip disabled tools
+        if (isToolDisabled) {
+          return acc;
+        }
+
+          // Categorize the tool into available or unavailable
+          if (tool.is_available && !isToolDisabled) {
             acc.availableTools.push(tool);
           } else {
             acc.unavailableTools.push(tool);
@@ -36,7 +49,7 @@ export const ToolsTab: React.FC<{ className?: string }> = ({ className = '' }) =
         },
         { availableTools: [], unavailableTools: [] }
       );
-  }, [data]);
+  }, [data, disabledToolNames]);
   const enabledTools = paramTools
     ? availableTools.filter((t) => paramTools.map((t) => t.name).includes(t.name))
     : [];
