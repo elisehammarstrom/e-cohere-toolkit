@@ -30,7 +30,7 @@ export const SearchBar: React.FC<Props> = ({ className }) => {
             className="w-full md:w-auto px-8 py-3 bg-mindorange border-mindorange text-white fill-white active:scale-95 duration-100 border will-change-transform overflow-hidden relative rounded-xl transition-all"
           >
             <div className="flex items-center transition-all opacity-1">
-              <span className="text-sm font-semibold whitespace-nowrap truncate mx-auto">
+              <span className="text-l font-semibold whitespace-nowrap truncate mx-auto">
                 Sök
               </span>
             </div>

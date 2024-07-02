@@ -82,7 +82,6 @@ export const Layout: React.FC<Props> = ({ title = 'Chat', children }) => {
 
     <div className="fixed flex flex-col h-screen w-full">
 
-      {/* <div className="h-2/5 w-full bg-mindorange flex flex-row justify-end"> */}
       <div className="h-2/5 w-full flex flex-row justify-end">
       {/* First horizontal section content */}
 
@@ -122,17 +121,19 @@ export const Layout: React.FC<Props> = ({ title = 'Chat', children }) => {
       <div className="h-1/2 w-full border-t-5 border-gray-200 justify-center flex">
         {/* 1st section content in 2nd horizontal section */}
         <section className="flex flex-col gap-4 items-center">
-            <h2 className="text-lg font-semibold">Your selection for lookout:</h2>
+            <h2 className="text-lg font-semibold">Select your sources:</h2>
             <div className="flex gap-4">
-              <button className="px-4 py-2 text-white bg-mindblue rounded-2xl">Theme 1: Suicide prevention</button>
-              <button className="px-4 py-2 text-white bg-mindblue rounded-2xl">Theme 2: Medical treatments for x</button>
-              <select className="px-4 py-2 border border-gray-300 rounded-2xl">
+              <button className="px-4 py-2 text-white bg-mindmist rounded-2xl">PubMed</button>
+              <button className="px-4 py-2 text-white bg-mindblue rounded-2xl">Google Scholar</button>
+              <button className="px-4 py-2 text-white bg-mindblue rounded-2xl">ArchiveX</button>
+              <button className="self-middle px-6 py-3 text-white bg-mindblue rounded-xl">Upload your own documents</button>
+              {/* <select className="px-4 py-2 border border-gray-300 rounded-2xl">
                 <option>Dropdown of known themes to select from</option>
                 <option>Default theme X</option>
                 <option>Default theme Y</option>
-              </select>
+              </select> */}
             </div>
-            <button className="self-middle px-6 py-3 text-white bg-mindblue rounded-xl">Save</button>
+            {/* <button className="self-middle px-6 py-3 text-white bg-mindblue rounded-xl">Save</button> */}
           </section>
       </div>
 
@@ -140,7 +141,7 @@ export const Layout: React.FC<Props> = ({ title = 'Chat', children }) => {
       <div className="h-1/2 w-full">
           {/* 2nd section content in 2nd horizontal section */}
 
-          <section className="flex gap-4">
+          {/* <section className="flex gap-4">
             <div className="flex-grow p-4 border border-gray-300 rounded-xl">
               <h3 className="mb-2 font-semibold">Recent Pubs</h3>
               <div className="mb-2">
@@ -155,7 +156,7 @@ export const Layout: React.FC<Props> = ({ title = 'Chat', children }) => {
             <div className="flex-grow p-4 border border-gray-300 rounded-xl">
               <h3 className="mb-2 font-semibold">Updates for your saved themes</h3>
             </div>
-          </section>
+          </section> */}
           
       </div>
     </div>
