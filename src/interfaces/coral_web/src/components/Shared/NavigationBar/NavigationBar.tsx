@@ -5,6 +5,8 @@ import React, { PropsWithChildren } from 'react';
 import { Logo } from '@/components/Shared';
 import { env } from '@/env.mjs';
 
+import { NavigationUserMenu } from '@/components/NavigationUserMenu';
+
 /**
  * @description Displays the navigation bar where clicking the logo will return the user to the home page.
  */
@@ -27,7 +29,16 @@ export const NavigationBar: React.FC<PropsWithChildren<{ className?: string }>> 
       </Link>
 
       {/* Adjusted circular button */}
-      <div className="flex items-center ml-auto">
+      <div className="flex items-center ml-auto gap-8">
+      <Link href="/answer">
+          <p>Answer temp</p>
+      </Link>
+
+
+        <Link href="/about">
+          <p>About</p>
+        </Link>
+
         <button className="flex items-center justify-center w-16 h-16 rounded-full bg-mindmist text-mindblue font-bold">
           Lisa
         </button>
