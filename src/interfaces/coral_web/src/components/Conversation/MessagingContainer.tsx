@@ -61,6 +61,7 @@ export default memo(MessagingContainer);
 const Content: React.FC<Props> = (props) => {
   const { isStreaming, messages, composer, streamingMessage } = props;
   const scrollToBottom = useScrollToBottom();
+
   const {
     agents: { isEditAgentPanelOpen },
   } = useAgentsStore();
@@ -106,6 +107,7 @@ const Content: React.FC<Props> = (props) => {
 
   const handleScrollToNewMessage = () => {
     scrollToBottom({ behavior: 'smooth' });
+    
   };
 
   return (

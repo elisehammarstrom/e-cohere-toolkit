@@ -15,6 +15,10 @@ import { useSettingsStore } from '@/stores';
 import { ConfigurableParams } from '@/stores/slices/paramsSlice';
 import { ChatMessage } from '@/types/message';
 import { cn } from '@/utils';
+import { EditConversationTitle } from '@/components/Modals/EditConversationTitle';
+
+// Elise edits
+import { useRouter } from 'next/router';
 
 type Props = {
   isFirstTurn: boolean;
@@ -60,6 +64,16 @@ export const Composer: React.FC<Props> = ({
   const isReadyToReceiveMessage = !isStreaming;
   const canSend = isReadyToReceiveMessage && value.trim().length > 0 && !isToolAuthRequired;
 
+
+  // Elise edits
+  const router = useRouter();
+
+  // Elise edits
+  const routeToAnswerPage = () => {
+    router.push('/answer');
+    
+  };
+
   const handleCompositionStart = () => {
     setIsComposing(true);
   };
@@ -79,6 +93,7 @@ export const Composer: React.FC<Props> = ({
         setTagQuery('');
         setShowDataSourceMenu(false);
         onChange('');
+        routeToAnswerPage();
       }
     }
   };
@@ -159,7 +174,7 @@ export const Composer: React.FC<Props> = ({
 
   return (
     <div className="flex w-full flex-col">
-      <FirstTurnSuggestions isFirstTurn={isFirstTurn} onSuggestionClick={onSend} />
+      {/* <FirstTurnSuggestions isFirstTurn={isFirstTurn} onSuggestionClick={onSend} /> */}
       <div
         className={cn(
           'relative flex w-full flex-col',
@@ -211,6 +226,7 @@ export const Composer: React.FC<Props> = ({
             onChange={handleChange}
             disabled={isToolAuthRequired}
           />
+          {/* button to send the message */}
           <button
             className={cn(
               'h-8 w-8',
